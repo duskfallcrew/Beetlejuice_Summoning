@@ -1,19 +1,29 @@
 import webbrowser
 
 def summon_beetlejuice_single_line():
+    print("Welcome to the Beetlejuice summoning script!")
+    print("To summon Beetlejuice, say his name three times, one line per summon.")
+    print("You'll need to say 'Beetlejuice' exactly as it is spelled.")
+    print("Let's begin!")
+    
     summon_count = 0
     while summon_count < 3:
-        user_input = input("Summon Beetlejuice by saying his name three times (one line per summon): ")
+        user_input = input("Summon Beetlejuice (line {}): ".format(summon_count + 1))
         if user_input.lower() == "beetlejuice":
             summon_count += 1
             print("Beetlejuice!")
         else:
-            print("That's not Beetlejuice's name!")
-    print("Beetlejuice has been summoned!")
+            print("That's not Beetlejuice's name! Try again.")
+            
+    print("Beetlejuice has been summoned successfully!")
     return True
 
 def validate_lyrics():
-    lyrics = input("Please enter lyrics from 'The Whole Being Dead THING': ")
+    print("\nNow, let's validate your summoning by entering lyrics from 'The Whole Being Dead THING'.")
+    print("Listen to the lyrics carefully and enter any phrase you hear.")
+    print("You don't need to enter the entire lyrics, just any phrase from the song.")
+    lyrics = input("Please enter a phrase from 'The Whole Being Dead THING': ")
+    
     expected_phrases = [
         "Hey, folks! Begging your pardon!",
         "'Scuse me! Sorry to barge in!",
@@ -97,11 +107,13 @@ def validate_lyrics():
         "On the whole 'being dead' thing!",
         "God, I hope you're ready for a show about death!"
     ]
-    return all(phrase.lower() in lyrics.lower() for phrase in expected_phrases)
+    
+    return any(phrase.lower() in lyrics.lower() for phrase in expected_phrases)
 
-# Call this function after Beetlejuice has been summoned three times
 def play_beetlejuice_song():
-    print("You've summoned Beetlejuice three times! Now let's validate your summoning with lyrics.")
+    print("\nYou've successfully summoned Beetlejuice three times!")
+    print("Now, let's validate your summoning with lyrics.")
+    
     if validate_lyrics():
         print("Congratulations! Your summoning is validated.")
         # Open YouTube video of Beetlejuice Animatic 
@@ -109,4 +121,3 @@ def play_beetlejuice_song():
         webbrowser.open(video_url)
     else:
         print("Sorry, the summoning is not validated. Please try again later.")
-
