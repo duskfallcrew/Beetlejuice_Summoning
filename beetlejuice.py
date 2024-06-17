@@ -1,3 +1,4 @@
+import os
 import tkinter as tk
 from PIL import Image, ImageTk
 
@@ -35,7 +36,7 @@ class BeetlejuiceApp:
         new_window = tk.Toplevel(self.root)
         new_window.title("Beetlejuice")
         img = Image.open("beetlejuice.jpg")  # Ensure you have an image named beetlejuice.jpg in the same directory
-        img = img.resize((200, 200), Image.ANTIALIAS)
+        img = img.resize((200, 200), Image.ANTIALIAS)  # Correct the attribute name to Image.ANTIALIAS
         photo = ImageTk.PhotoImage(img)
         img_label = tk.Label(new_window, image=photo)
         img_label.image = photo  # Keep a reference to avoid garbage collection
@@ -45,4 +46,3 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = BeetlejuiceApp(root)
     root.mainloop()
-#this version is just making sure it works and doesn't override the other one, because i might bring back the lyrics lol
