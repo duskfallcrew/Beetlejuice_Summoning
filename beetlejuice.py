@@ -1,8 +1,7 @@
-import os
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QWidget, QVBoxLayout
+import os
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QWidget, QVBoxLayout, QLineEdit
 from PyQt6.QtGui import QPixmap
-
 
 class BeetlejuiceApp(QMainWindow):
     def __init__(self):
