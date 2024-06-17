@@ -1,6 +1,5 @@
 import sys
-import os
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QWidget, QVBoxLayout, QLineEdit
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QVBoxLayout, QWidget, QLineEdit
 from PyQt6.QtGui import QPixmap
 
 class BeetlejuiceApp(QMainWindow):
@@ -39,21 +38,17 @@ class BeetlejuiceApp(QMainWindow):
         self.entry.clear()
     
     def show_beetlejuice_face(self):
-        beetlejuice_window = QMainWindow(self)
-        beetlejuice_window.setWindowTitle("Beetlejuice")
+        self.beetlejuice_window = QWidget()
+        self.beetlejuice_window.setWindowTitle("Beetlejuice")
         
-        central_widget = QWidget()
-        beetlejuice_window.setCentralWidget(central_widget)
+        pixmap = QPixmap("beetlejuice.jpg")
+        label = QLabel(self.beetlejuice_window)
+        label.setPixmap(pixmap.scaled(512, 512, aspectRatioMode='KeepAspectRatio'))
         
-        pixmap = QPixmap("beetlejuice.jpg")  # Ensure you have an image named beetlejuice.jpg
-        label = QLabel()
-        label.setPixmap(pixmap)
-        
-        layout = QVBoxLayout()
+        layout = QVBoxLayout(self.beetlejuice_window)
         layout.addWidget(label)
-        central_widget.setLayout(layout)
         
-        beetlejuice_window.show()
+        self.beetlejuice_window.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
