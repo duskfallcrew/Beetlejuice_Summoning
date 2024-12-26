@@ -43,12 +43,18 @@ class BeetlejuiceApp(QMainWindow):
         
         pixmap = QPixmap("beetlejuice.jpg")
         label = QLabel(self.beetlejuice_window)
-        label.setPixmap(pixmap.scaled(512, 512, aspectRatioMode='KeepAspectRatio'))
         
-        layout = QVBoxLayout(self.beetlejuice_window)
-        layout.addWidget(label)
-        
-        self.beetlejuice_window.show()
+        if not pixmap.isNull():
+            label.setPixmap(pixmap.scaled(512, 512, aspectRatioMode='KeepAspectRatio'))
+            layout = QVBoxLayout(self.beetlejuice_window)
+            layout.addWidget(label)
+            self.beetlejuice_window.show()
+        else:
+            # Handle case where the image was not found.
+            label.setText("Image file not found")
+            layout = QVBoxLayout(self.beetlejuice_window)
+            layout.addWidget(label)
+            self.beetlejuice_window.show()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
