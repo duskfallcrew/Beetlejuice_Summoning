@@ -6,6 +6,8 @@
 
 This fun little script summons a YouTube video of "The Whole Being Dead Thing" from the Beetlejuice musical after you say his name (Beetlejuice) three times. Once Beetlejuice has been summoned, an image of him will appear with a message saying "It's Showtime!!", and after a short delay, a YouTube video will launch!
 
+You'll need Tkinkter, and Pillow, so please use PIP to install any packages required.  Requirements wasn't added because freezing requirements isnt something i understand how to do.
+
 YouTube video it uses: [Whole Being dead Thing PT2 ANIMATIC](https://www.youtube.com/watch?v=ErHL4qwwyxw)
 
 <img width="2329" alt="Screenshot 2024-12-26 at 23 28 08" src="https://github.com/user-attachments/assets/6b27fce4-2481-4c30-a155-f457d6512ee7" />
