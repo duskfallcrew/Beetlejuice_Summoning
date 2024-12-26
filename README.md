@@ -1,12 +1,15 @@
-# Summon a Demon: Say his name 3 times or just - y'know one of the lines of the song.
-Literally just summons a youtube video after you say his name 3x spoken unbroken, and makes sure you enter one of the "WHOLE BEING DEAD THING" lyrics. It's untested, but i was using GPT to be a nerd.
+# Summon a Demon: Say his name 3 times... and get ready for the show!
 
-Youtube video it uses: [Whole Being dead Thing PT2 ANIMATIC](https://www.youtube.com/watch?v=ErHL4qwwyxw)
+This fun little script summons a YouTube video of "The Whole Being Dead Thing" from the Beetlejuice musical after you say his name (Beetlejuice) three times. Once Beetlejuice has been summoned, an image of him will appear with a message saying "It's Showtime!!", and after a short delay, a YouTube video will launch!
 
-Literally the code may NOT even work, I don't know python myself, i tend to patch and go via GPT, so I was just literally having fun. 
+YouTube video it uses: [Whole Being dead Thing PT2 ANIMATIC](https://www.youtube.com/watch?v=ErHL4qwwyxw)
 
-Anyone else wanna toy with this for kicks go right ahead!
+This project was conceived by myself, with coding assistance from Google Gemini. It's a silly, fun project just for kicks.
 
-Right now it doesn't seem to work, and GPT tends to tell me that it's 100% correct, but maybe it's just because Beetlejuice DOES exist, and he doesn't want to be summoned by python.
+Feel free to use and toy around with this code if you feel so inclined. 
 
-...Or i'm just dumb.
+The image included is NOT mine, I DO NOT TAKE CREDIT FOR IT. 
+
+This is literally like your old school "EXE" type files that would pop your CD drive open for a coke can holder.
+
+It's video loading function is just popping up a youtube URL, i dont know how to make it safer than that lol.
